@@ -1,0 +1,17 @@
+name: wireui
+
+services:
+    db:
+        image: postgres
+        restart: no
+        shm_size: 128mb
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_DB: example_wireui
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: secret
+        volumes:
+            - db_data:/var/lib/postgresql/data
+volumes:
+    db_data:
