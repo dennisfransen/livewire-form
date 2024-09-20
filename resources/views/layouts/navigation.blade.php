@@ -15,6 +15,12 @@
 					<x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
 						{{ __('Dashboard') }}
 					</x-nav-link>
+					<x-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.index')">
+						{{ __('Invoices') }}
+					</x-nav-link>
+					<x-nav-link :href="route('invoices.create')" :active="request()->routeIs('invoices.create')">
+						{{ __('Create Invoice') }}
+					</x-nav-link>
 				</div>
 			</div>
 
@@ -78,6 +84,12 @@
 			<x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
 				{{ __('Dashboard') }}
 			</x-responsive-nav-link>
+			<x-responsive-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.index')">
+				{{ __('Invoices') }}
+			</x-responsive-nav-link>
+			<x-responsive-nav-link :href="route('invoices.create')" :active="request()->routeIs('invoices.create')">
+				{{ __('Create Invoice') }}
+			</x-responsive-nav-link>
 		</div>
 
 		<!-- Responsive Settings Options -->
@@ -89,7 +101,7 @@
 
 			<div class="mt-3 space-y-1">
 				<x-responsive-nav-link :href="route('profile.edit')">
-					{{ __('Profile') }}
+					{{ __('Settings') }}
 				</x-responsive-nav-link>
 
 				<!-- Authentication -->
