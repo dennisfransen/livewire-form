@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(User::class);
 			$table->text('description');
+			$table->date('invoice_date');
             $table->timestamps();
         });
     }

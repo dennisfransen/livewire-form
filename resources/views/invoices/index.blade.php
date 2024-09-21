@@ -10,12 +10,14 @@
 			<div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-4">
 				<table class="w-full text-sm">
 					<colgroup>
-						<col class="w-5/6">
+						<col class="w-4/6">
+						<col class="w-1/6">
 						<col class="w-1/6">
 					</colgroup>
 					<thead>
 						<tr class="dark:text-white">
 							<th class="px-3 text-left">{{ __('Description') }}</th>
+							<th class="px-3 text-left">{{ __('Invoice date') }}</th>
 							<th class="px-3 text-right">{{ __('Actions') }}</th>
 						</tr>
 					</thead>
@@ -24,6 +26,9 @@
 							<tr class="dark:text-gray-400 dark:hover:bg-gray-700 transition-colors">
 								<td class="truncate max-w-0 px-4 py-3">
 									{{ $invoice->description }}
+								</td>
+								<td class="truncate max-w-0 px-4 py-3">
+									{{ $invoice->invoice_date }}
 								</td>
 								<td class="text-right px-4 py-3">
 									<a href="{{ route('invoices.edit', $invoice) }}" class="mr-4">

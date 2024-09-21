@@ -32,6 +32,7 @@ class InvoiceController extends Controller
 	{
 		$validated = $request->validate([
 			'description' => 'required',
+			'invoice_date' => 'required|date_format:Y-m-d',
 		]);
 
 		$invoice = auth()->getUser()->invoices()->create($validated);
@@ -50,6 +51,7 @@ class InvoiceController extends Controller
 	{
 		$validated = $request->validate([
 			'description' => 'required',
+			'invoice_date' => 'required|date_format:Y-m-d',
 		]);
 
 		$invoice->update($validated);
